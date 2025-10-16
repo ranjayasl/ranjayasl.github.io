@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ranjaya K Senarathna — Portfolio</title>
+  <meta name="description" content="Ranjaya K Senarathna — IT undergraduate, Customer Service Associate, projects and contact." />
+
+  <!-- Simple reset + Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b74de;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background:linear-gradient(180deg,#f8fbff, var(--bg));
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Layout */
+    .wrap{max-width:1100px; margin:28px auto; padding:20px;}
+    header.site-header{display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:18px;}
+    .brand{display:flex; gap:14px; align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:#e6eefc;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:18px}
+    .brand h1{margin:0;font-size:18px}
+    .nav{display:flex; gap:12px; align-items:center;}
+    .nav a{color:var(--muted); text-decoration:none; font-weight:600; padding:8px 10px; border-radius:8px}
+    .nav a:hover{color:var(--accent); background:rgba(11,116,222,0.06)}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 340px; gap:18px; align-items:center; margin-bottom:18px}
+    .hero .intro h2{margin:0; font-size:26px}
+    .intro p.lead{color:var(--muted); margin:10px 0 18px}
+    .cta{display:flex; gap:10px; align-items:center}
+    .btn{background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600}
+    .btn.secondary{background:transparent; color:var(--accent); border:1px solid rgba(11,116,222,0.12)}
+
+    .profile-card{background:var(--card); border-radius:12px; padding:18px; box-shadow:0 8px 24px rgba(12,18,26,0.06); text-align:center}
+    .avatar{width:160px;height:160px;margin:0 auto 12px;border-radius:12px;overflow:hidden;background:#ddd}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .profile-meta{color:var(--muted); font-size:14px}
+
+    /* Sections grid */
+    .grid{display:grid; grid-template-columns:1fr 320px; gap:18px}
+    @media (max-width:920px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .profile-card{order:-1} }
+
+    /* Cards */
+    .card{background:var(--card); border-radius:12px; padding:16px; box-shadow:0 8px 24px rgba(12,18,26,0.04); margin-bottom:14px}
+    h3{margin:0 0 8px;font-size:16px}
+    p.small{color:var(--muted); margin:0}
+
+    /* Projects */
+    .projects {display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    @media (max-width:720px){ .projects{grid-template-columns:1fr} }
+    .project-card{padding:12px;border-radius:10px;border:1px solid rgba(8,18,30,0.04); background:linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6))}
+    .project-card h4{margin:0 0 8px;font-size:15px}
+    .project-card p{margin:0 0 10px;color:var(--muted);font-size:14px}
+    .project-card a{font-weight:600; color:var(--accent); text-decoration:none}
+
+    /* Skills */
+    .skills{display:flex; flex-wrap:wrap; gap:8px}
+    .skill{background:#f1f5f9;padding:8px 12px;border-radius:999px;font-size:13px;color:#0f172a}
+
+    /* Contact */
+    form.contact-form{display:flex; flex-direction:column; gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(12,18,26,0.06); font-size:14px; resize:vertical}
+    textarea{min-height:110px}
+    .note{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">RK</div>
+        <div>
+          <h1>Ranjaya K Senarathna</h1>
+          <div class="muted" style="font-size:13px">IT Undergraduate • Customer Service Associate</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn secondary" href="assets/Ranjaya_CV.pdf" download>Download CV</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="intro card">
+        <h2>Hello — I’m Ranjaya</h2>
+        <p class="lead">Undergraduate in Information Technology. I work in customer support and build simple automation and helpdesk simulations. I’m learning software engineering and building projects on GitHub.</p>
+
+        <div class="row">
+          <a class="btn" href="#contact">Hire / Contact</a>
+          <a class="btn secondary" href="https://github.com/ranjayasl" target="_blank">View GitHub</a>
+        </div>
+
+        <div style="margin-top:18px;">
+          <h3>Quick Info</h3>
+          <p class="small"><strong>Phone:</strong> 077 047 4383 • <strong>Email:</strong> <a href="mailto:manjayakavishara8@gmail.com">manjayakavishara8@gmail.com</a></p>
+          <p class="small">Location: Dehiathakandiya, Sri Lanka • DOB: 16 Aug 2003</p>
+        </div>
+      </div>
+
+      <aside class="profile-card card">
+        <div class="avatar">
+          <!-- Replace with your photo -->
+          <img src="assets/profile.jpg" alt="Ranjaya K Senarathna">
+        </div>
+        <div style="font-weight:700">Ranjaya K Senarathna</div>
+        <div class="profile-meta" style="margin-top:6px">Customer Service Associate — BTG (Dialog Axiata)</div>
+
+        <div style="margin-top:12px;text-align:left">
+          <h3 style="font-size:14px;margin-bottom:6px">Social</h3>
+          <div class="muted" style="font-size:14px">
+            <div><a href="https://www.facebook.com/share/19GXWKgxBZ/" target="_blank">Facebook</a></div>
+            <div><a href="https://www.instagram.com/kvissr?igsh=MWJydmtsNWN4bzhkcA==" target="_blank">Instagram</a></div>
+            <div><a href="https://github.com/ranjayasl" target="_blank">GitHub</a></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- MAIN GRID -->
+    <main class="grid">
+      <section>
+        <!-- About -->
+        <div id="about" class="card">
+          <h3>About</h3>
+          <p>I am an IT undergraduate at the University of Colombo School of Computing (BIT — ongoing) with hands-on customer service experience. I enjoy automating repetitive tasks, designing simple helpdesk workflows, and learning software development. I’m hardworking, a fast learner and enjoy solving problems.</p>
+
+          <h3 style="margin-top:14px">Experience & Education</h3>
+          <ul class="muted">
+            <li><strong>Customer Service Associate (CSA)</strong> — BTG Company (Dialog Axiata). April 2024 - Present</li>
+            <li><strong>Bachelor of Information Technology (Hons)</strong> — University of Colombo School of Computing (Ongoing)</li>
+            <li>ICT NVQ Level 3 • G.C.E. A/L (Technology) • G.C.E. O/L</li>
+          </ul>
+
+          <h3 style="margin-top:14px">Skills</h3>
+          <div class="skills" aria-hidden="true">
+            <span class="skill">Customer Support</span>
+            <span class="skill">IT Troubleshooting</span>
+            <span class="skill">Google Sheets / Scripting</span>
+            <span class="skill">Microsoft Office</span>
+            <span class="skill">Teamwork</span>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects" class="card">
+          <h3>Selected Projects</h3>
+          <div class="projects" role="list">
+            <div class="project-card" role="listitem">
+              <h4>IT Helpdesk Simulation (Academic)</h4>
+              <p>Mock helpdesk model to simulate ticket creation and resolution processes for team coordination and training.</p>
+              <a href="#" onclick="openGit('https://github.com/ranjayasl')" aria-label="Open GitHub project">View on GitHub →</a>
+            </div>
+
+            <div class="project-card" role="listitem">
+              <h4>Customer Support Flow Automation (Personal)</h4>
+              <p>Conceptual automation using Google Sheets and simple scripts to streamline support steps and reduce manual work.</p>
+              <a href="#" onclick="openGit('https://github.com/ranjayasl')">View on GitHub →</a>
+            </div>
+
+            <!-- Example project card - duplicate and edit as needed -->
+            <div class="project-card" role="listitem">
+              <h4>Personal Website</h4>
+              <p>This website itself — a clean responsive portfolio built with HTML/CSS and a tiny bit of JS. Hosted on GitHub Pages.</p>
+              <a href="https://github.com/ranjayasl" target="_blank">Repository →</a>
+            </div>
+
+            <div class="project-card" role="listitem">
+              <h4>Automation Scripts</h4>
+              <p>Small scripts for automating repetitive support tasks (CSV transforms, email templating, sheet macros).</p>
+              <a href="https://github.com/ranjayasl" target="_blank">Repository →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- More sections if needed -->
+      </section>
+
+      <aside>
+        <!-- Contact card -->
+        <div id="contact" class="card">
+          <h3>Contact Me</h3>
+          <p class="note">Prefer email? Use the form below — it opens your email client.</p>
+
+          <form class="contact-form" onsubmit="sendMail(event)">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="email" id="email" placeholder="Your email" required />
+            <textarea id="message" placeholder="Your message" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+
+          <div style="margin-top:12px">
+            <h4>Direct</h4>
+            <p class="muted">Phone: <strong>077 047 4383</strong><br>Email: <a href="mailto:manjayakavishara8@gmail.com">manjayakavishara8@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Small info card -->
+        <div class="card">
+          <h3>Availability</h3>
+          <p class="small muted">Open to internships and junior roles in software engineering, IT support, and automation projects. Willing to learn and relocate within Sri Lanka.</p>
+
+          <h3 style="margin-top:12px">References</h3>
+          <p class="small muted">Available upon request.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Ranjaya K Senarathna</strong> — Built with HTML & CSS. Hosted on GitHub Pages or Netlify.</div>
+      <div style="margin-top:6px" class="muted">Made: 2025</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small helper functions
+    function openGit(url){
+      window.open(url, '_blank');
+    }
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Mailto fallback: opens the default email client
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\nMessage:\\n' + message);
+      window.location.href = `mailto:manjayakavishara8@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
